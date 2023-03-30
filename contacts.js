@@ -3,7 +3,6 @@ const path = require('path');
 
 const contactsPath = path.resolve('./db/contacts.json');
 
-// TODO: задокументувати кожну функцію
 function listContacts() {
 
   fs.readFile(contactsPath)
@@ -30,14 +29,14 @@ function removeContact(contactId) {
 }
 
 function addContact(name, email, phone) {
-  // ...твій код
-  fs.appendFile(contactsPath, JSON.stringify({name, email, phone}))
+
+  fs.readFile(contactsPath)
+    .then(data => { const contacts = JSON.parse(data); contacts.push({name, email, phone}); return contacts})
+    .then(data => fs.writeFile(contactsPath, JSON.stringify(data)))
     .catch(err => console.log(err.message));
 
-    // fs.readFile(contactsPath)
-    // .then(data => JSON.parse(data))
-    // .then(data => fs.appendFile(contactsPath, JSON.stringify(data)))
-    // .catch(err => console.log(err.message));
+  // fs.appendFile(contactsPath, JSON.stringify({name, email, phone}))
+  //   .catch(err => console.log(err.message));
 }
 
 module.exports = {
@@ -47,12 +46,3 @@ module.exports = {
   addContact: addContact,
 }
 
-
-
-
-// {
-//   "id": "test",
-//   "name": "test",
-//   "email": "test.ante@vestibul.co.uk",
-//   "phone": "(999) 999-3792"
-// },
