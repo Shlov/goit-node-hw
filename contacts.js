@@ -35,8 +35,6 @@ function addContact(name, email, phone) {
     .then(data => fs.writeFile(contactsPath, JSON.stringify(data)))
     .catch(err => console.log(err.message));
 
-  // fs.appendFile(contactsPath, JSON.stringify({name, email, phone}))
-  //   .catch(err => console.log(err.message));
 }
 
 module.exports = {
