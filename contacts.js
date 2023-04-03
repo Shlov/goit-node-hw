@@ -6,7 +6,7 @@ const contactsPath = path.resolve('./db/contacts.json');
 function listContacts() {
 
   fs.readFile(contactsPath)
-    .then(data => console.log(JSON.parse(data)))
+    .then(data => console.table(JSON.parse(data)))
     .catch(err => console.log(err.message));
 
 }
