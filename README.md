@@ -1,2 +1,2 @@
 
-Скриншот з усіма 4 командами: https://monosnap.com/file/BEqAfOPmgcKh0Y8Vieo5F7Lcjr8rCq
+Скриншот з усіма 4 командами: https://monosnap.com/file/EQITDbzES1pu8CZsIqeCmhN2AEiUZe
