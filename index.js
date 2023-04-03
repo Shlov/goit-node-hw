@@ -1,4 +1,4 @@
-const {listContacts, getContactById, removeContact, addContact} =require('./contacts.js');
+const {listContacts, getContactById, removeContact, addContact} =require('./contacts-async.js');
 const { Command } = require("commander");
 
 // test fnc
@@ -51,4 +51,3 @@ function invokeAction({ action, id, name, email, phone }) {
 invokeAction(argv);
 
 console.log('Welcome to my homework!')
-
