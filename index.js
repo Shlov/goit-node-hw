@@ -1,4 +1,5 @@
 const {listContacts, getContactById, removeContact, addContact} =require('./contacts-async.js');
+// const {listContacts, getContactById, removeContact, addContact} =require('./contacts.js');
 const { Command } = require("commander");
 
 // test fnc
